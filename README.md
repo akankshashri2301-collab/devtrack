@@ -56,6 +56,4 @@ Add Postman screenshots in `screenshots/`:
 
 ## Design decision
 
-<!-- Write your own here. Example: JSON file paths are built from Django's BASE_DIR,
-so the files are always created in the project root no matter which directory the
-server is started from. -->
+I kept all the OOP classes (BaseEntity, Reporter, Issue and its subclasses) in `models.py` and kept `views.py` only for handling HTTP requests. Validation lives inside the classes via `validate()`, so views stay small and the same rules apply everywhere an entity is created.
